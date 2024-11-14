@@ -22,7 +22,7 @@ class Graph
         }
     }
 };
-void BFS(Graph const &graph,int v,vector<bool> &discovered)
+void DFS(Graph const &graph,int v,vector<bool> &discovered)
 {
     stack<int>q ;
     discovered[v] = true;
@@ -52,7 +52,7 @@ int main() {
     {
         if(discovered[i] == false)
         {
-            BFS(graph,i,discovered);
+            DFS(graph,i,discovered);
         }
     }
     return 0;
